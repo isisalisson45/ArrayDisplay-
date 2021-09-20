@@ -1,0 +1,2 @@
+# ArrayDisplay-
+; Create GUI Local $hGui = GUICreate( "Simple", 820, 660 )  ; Create ArrayDisplay control Local $aDisplay = _ArrayDisplayCtrl( $hGui, 10, 10, 800, 600, $aArray )  GUISetState() GUISetState( @SW_SHOWNOACTIVATE, $aDisplay[0] ) ; Show ArrayDisplay control  Local $iMsg While 1   $iMsg = GUIGetMsg()   Switch $iMsg     ; Handle messages for AutoIt events in ArrayDisplay control     Case $aDisplay[1] To $aDisplay[2]       $aDisplay[3]( $iMsg, $aDisplay[4] )
